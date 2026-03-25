@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A complete visual guide to HTML basics — elements, attributes, structure, and more." />
+    <meta property="og:title" content="HTML Basics — Visual Reference Guide" />
+    <meta property="og:type" content="website" />
+    <title>HTML Basics — Visual Reference Guide</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+
+    <!-- HEADER / HERO -->
+    <header class="site-header">
+      <div class="header-grid">
+        <div class="header-badge">Reference Guide</div>
+        <h1 class="site-title">HTML<br/><span class="title-accent">Basics</span></h1>
+        <p class="site-subtitle">A complete visual guide to HTML — elements, attributes, structure, semantics, and best practices.</p>
+        <nav class="top-nav">
+          <a href="#elements" class="nav-link">Elements</a>
+          <a href="#structure" class="nav-link">Structure</a>
+          <a href="#media" class="nav-link">Media</a>
+          <a href="#paths" class="nav-link">Paths</a>
+        </nav>
+      </div>
+      <div class="header-decoration" aria-hidden="true">
+        <span class="deco-tag">&lt;html&gt;</span>
+        <span class="deco-tag">&lt;head&gt;</span>
+        <span class="deco-tag">&lt;body&gt;</span>
+        <span class="deco-tag">&lt;/body&gt;</span>
+        <span class="deco-tag">&lt;/html&gt;</span>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- SECTION: What is HTML -->
+      <section class="intro-section" id="intro">
+        <div class="container">
+          <div class="intro-grid">
+            <div class="intro-card card--highlight">
+              <div class="card-number">01</div>
+              <h2>What is HTML?</h2>
+              <p>HTML <em>(HyperText Markup Language)</em> represents the <strong>content and structure</strong> of a web page. It is the foundation every website is built on.</p>
+            </div>
+            <div class="intro-card">
+              <div class="card-number">02</div>
+              <h2>Elements</h2>
+              <p>Elements are the building blocks of HTML. Most consist of an <strong>opening tag</strong> and a <strong>closing tag</strong> wrapping content.</p>
+              <pre class="code-block"><code>&lt;elementName&gt;Content&lt;/elementName&gt;</code></pre>
+            </div>
+            <div class="intro-card">
+              <div class="card-number">03</div>
+              <h2>Void Elements</h2>
+              <p>Void elements cannot have content and only have a start tag. Common examples:</p>
+              <pre class="code-block"><code>&lt;img&gt;  &lt;meta&gt;  &lt;link&gt;  &lt;br&gt;</code></pre>
+            </div>
+            <div class="intro-card">
+              <div class="card-number">04</div>
+              <h2>Attributes</h2>
+              <p>Attributes provide additional information about an element or specify its behavior.</p>
+              <pre class="code-block"><code>&lt;a href="https://example.com"&gt;Link&lt;/a&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: Common Elements -->
+      <section class="elements-section" id="elements">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">&lt;elements&gt;</span>
+            <h2 class="section-title">Common HTML Elements</h2>
+          </div>
+
+          <div class="elements-grid">
+
+            <article class="element-card">
+              <h3 class="el-name">Headings</h3>
+              <p class="el-desc">Six levels of headings indicate content importance. Lower number = higher importance.</p>
+              <pre class="code-block"><code>&lt;h1&gt;Most Important&lt;/h1&gt;
+&lt;h2&gt;Second Level&lt;/h2&gt;
+&lt;h3&gt;Third Level&lt;/h3&gt;
+&lt;h4&gt;Fourth Level&lt;/h4&gt;
+&lt;h5&gt;Fifth Level&lt;/h5&gt;
+&lt;h6&gt;Least Important&lt;/h6&gt;</code></pre>
+            </article>
+
+            <article class="element-card">
+              <h3 class="el-name">Paragraph &amp; Text</h3>
+              <p class="el-desc">Use <code>&lt;p&gt;</code> for blocks of text, <code>&lt;em&gt;</code> for emphasis, and <code>&lt;strong&gt;</code> for urgency.</p>
+              <pre class="code-block"><code>&lt;p&gt;Cats &lt;em&gt;love&lt;/em&gt; lasagna.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Important:&lt;/strong&gt;
+  Wear safety goggles.
+&lt;/p&gt;</code></pre>
+            </article>
+
+            <article class="element-card">
+              <h3 class="el-name">Images</h3>
+              <p class="el-desc">The <code>&lt;img&gt;</code> element embeds images. Always include <code>src</code> and <code>alt</code> attributes.</p>
+              <pre class="code-block"><code>&lt;img
+  src="cat.jpg"
+  alt="A tabby cat"
+&gt;</code></pre>
+            </article>
+
+            <article class="element-card">
+              <h3 class="el-name">Links</h3>
+              <p class="el-desc">Anchor elements create links. The <code>href</code> attribute specifies the destination.</p>
+              <pre class="code-block"><code>&lt;a href="https://example.com"&gt;
+  Click here
+&lt;/a&gt;</code></pre>
+            </article>
+
+            <article class="element-card">
+              <h3 class="el-name">Lists</h3>
+              <p class="el-desc">Use <code>&lt;ul&gt;</code> for unordered (bulleted) and <code>&lt;ol&gt;</code> for ordered (numbered) lists.</p>
+              <pre class="code-block"><code>&lt;ul&gt;
+  &lt;li&gt;Catnip&lt;/li&gt;
+  &lt;li&gt;Laser pointer&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Flea treatment&lt;/li&gt;
+  &lt;li&gt;Thunder&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+            </article>
+
+            <article class="element-card">
+              <h3 class="el-name">Figure &amp; Caption</h3>
+              <p class="el-desc"><code>&lt;figure&gt;</code> groups images with <code>&lt;figcaption&gt;</code> for accessible captions.</p>
+              <pre class="code-block"><code>&lt;figure&gt;
+  &lt;img src="cats.jpg"
+    alt="Two kittens"&gt;
+  &lt;figcaption&gt;
+    Cats &lt;strong&gt;hate&lt;/strong&gt;
+    other cats.
+  &lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+            </article>
+
+            <article class="element-card">
+              <h3 class="el-name">Semantic Layout</h3>
+              <p class="el-desc">Semantic elements describe their meaning to both the browser and the developer.</p>
+              <pre class="code-block"><code>&lt;main&gt;...main content...&lt;/main&gt;
+&lt;section&gt;...grouped content...&lt;/section&gt;
+&lt;footer&gt;...copyright...&lt;/footer&gt;
+&lt;div&gt;...generic container...&lt;/div&gt;</code></pre>
+            </article>
+
+            <article class="element-card">
+              <h3 class="el-name">Comments</h3>
+              <p class="el-desc">Comments leave notes in your code for yourself and other developers. They are not rendered.</p>
+              <pre class="code-block"><code>&lt;!-- This is an HTML comment --&gt;</code></pre>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: Structure & Boilerplate -->
+      <section class="structure-section" id="structure">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">&lt;structure&gt;</span>
+            <h2 class="section-title">HTML Structure &amp; Boilerplate</h2>
+          </div>
+          <div class="boilerplate-layout">
+            <div class="boilerplate-code">
+              <pre class="code-block code-block--large"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;link rel="stylesheet"
+      href="./styles.css" /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- Content goes here --&gt;
+    &lt;script src="app.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+            <div class="boilerplate-notes">
+              <div class="note-item">
+                <span class="note-tag">DOCTYPE</span>
+                <p>Tells browsers which version of HTML you're using.</p>
+              </div>
+              <div class="note-item">
+                <span class="note-tag">&lt;html lang="en"&gt;</span>
+                <p>Root element of the document. <code>lang</code> sets the document language.</p>
+              </div>
+              <div class="note-item">
+                <span class="note-tag">&lt;head&gt;</span>
+                <p>Contains metadata — info for browsers and search engines, not visible to users.</p>
+              </div>
+              <div class="note-item">
+                <span class="note-tag">charset="utf-8"</span>
+                <p>UTF-8 encoding supports virtually all characters on the web.</p>
+              </div>
+              <div class="note-item">
+                <span class="note-tag">&lt;body&gt;</span>
+                <p>All visible content lives here — headings, paragraphs, images, etc.</p>
+              </div>
+              <div class="note-item">
+                <span class="note-tag">IDs &amp; Classes</span>
+                <p>IDs are unique per document. Classes can be reused for grouping &amp; styling.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: Media -->
+      <section class="media-section" id="media">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">&lt;media&gt;</span>
+            <h2 class="section-title">Media &amp; Multimedia</h2>
+          </div>
+          <div class="media-grid">
+            <article class="element-card element-card--wide">
+              <h3 class="el-name">Audio</h3>
+              <p class="el-desc">The <code>&lt;audio&gt;</code> element supports mp3, wav, and ogg formats. Use <code>controls</code>, <code>loop</code>, and <code>muted</code> boolean attributes to control playback.</p>
+              <pre class="code-block"><code>&lt;audio
+  src="music.mp3"
+  controls
+  loop
+  muted
+&gt;&lt;/audio&gt;
+
+&lt;!-- Multiple sources for browser compatibility --&gt;
+&lt;audio controls&gt;
+  &lt;source src="audio.ogg" type="audio/ogg" /&gt;
+  &lt;source src="audio.mp3" type="audio/mpeg" /&gt;
+&lt;/audio&gt;</code></pre>
+            </article>
+
+            <article class="element-card element-card--wide">
+              <h3 class="el-name">Video</h3>
+              <p class="el-desc">The <code>&lt;video&gt;</code> element supports mp4, ogg, and webm. The <code>poster</code> attribute shows a preview image before the video plays.</p>
+              <pre class="code-block"><code>&lt;video
+  src="clip.mp4"
+  controls
+  loop
+  muted
+  poster="thumbnail.jpg"
+  width="620"
+&gt;&lt;/video&gt;</code></pre>
+            </article>
+
+            <article class="element-card element-card--wide">
+              <h3 class="el-name">iFrame (Inline Frame)</h3>
+              <p class="el-desc">iFrame embeds external HTML content — including YouTube videos — directly in your page.</p>
+              <pre class="code-block"><code>&lt;iframe
+  src="https://www.youtube.com/embed/VIDEO_ID"
+  width="560"
+  height="315"
+  allowfullscreen
+  title="YouTube video player"
+&gt;&lt;/iframe&gt;</code></pre>
+            </article>
+
+            <article class="element-card">
+              <h3 class="el-name">Image Formats</h3>
+              <p class="el-desc">Prefer modern formats over PNG/JPG for better performance:</p>
+              <ul class="format-list">
+                <li><strong>WEBP</strong> — great compression, wide support</li>
+                <li><strong>AVIF</strong> — best compression, growing support</li>
+                <li><strong>SVG</strong> — infinite scalability, no quality loss</li>
+              </ul>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: Paths & Links -->
+      <section class="paths-section" id="paths">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">&lt;paths&gt;</span>
+            <h2 class="section-title">Paths, Links &amp; Target Attributes</h2>
+          </div>
+          <div class="paths-grid">
+            <div class="path-card path-card--absolute">
+              <h3>Absolute Path</h3>
+              <p>A complete URL — includes protocol, domain, and file path. Use for external resources.</p>
+              <pre class="code-block"><code>&lt;a href="https://freecodecamp.org"&gt;
+  Visit freeCodeCamp
+&lt;/a&gt;</code></pre>
+            </div>
+            <div class="path-card path-card--relative">
+              <h3>Relative Path</h3>
+              <p>Relative to the current file's location. Shorter and flexible for internal links.</p>
+              <pre class="code-block"><code>&lt;a href="about.html"&gt;About Page&lt;/a&gt;
+&lt;link href="./styles.css" /&gt;
+&lt;img src="../images/cat.jpg" /&gt;</code></pre>
+            </div>
+          </div>
+
+          <div class="target-table-wrap">
+            <h3 class="subsection-title">Target Attribute Values</h3>
+            <table class="target-table">
+              <thead>
+                <tr>
+                  <th>Value</th>
+                  <th>Behavior</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>_self</code></td>
+                  <td>Opens in the current tab/window <em>(default)</em></td>
+                </tr>
+                <tr>
+                  <td><code>_blank</code></td>
+                  <td>Opens in a new tab or window</td>
+                </tr>
+                <tr>
+                  <td><code>_parent</code></td>
+                  <td>Opens in the parent context (e.g., outside an iframe)</td>
+                </tr>
+                <tr>
+                  <td><code>_top</code></td>
+                  <td>Opens in the topmost browsing context</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="link-states-wrap">
+            <h3 class="subsection-title">Link States (CSS Pseudo-classes)</h3>
+            <div class="link-states-grid">
+              <div class="state-pill state--link">:link <span>unvisited</span></div>
+              <div class="state-pill state--visited">:visited <span>already seen</span></div>
+              <div class="state-pill state--hover">:hover <span>cursor over</span></div>
+              <div class="state-pill state--focus">:focus <span>keyboard focus</span></div>
+              <div class="state-pill state--active">:active <span>being clicked</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: SEO -->
+      <section class="seo-section" id="seo">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">&lt;meta&gt;</span>
+            <h2 class="section-title">SEO &amp; Open Graph</h2>
+          </div>
+          <div class="seo-grid">
+            <article class="element-card">
+              <h3 class="el-name">Meta Description</h3>
+              <p class="el-desc">Provides a short page summary for search engines — impacts SEO rankings.</p>
+              <pre class="code-block"><code>&lt;meta
+  name="description"
+  content="Expert tips on gardening."
+/&gt;</code></pre>
+            </article>
+            <article class="element-card">
+              <h3 class="el-name">Open Graph Tags</h3>
+              <p class="el-desc">Controls how your page appears when shared on social media (Facebook, LinkedIn, etc.).</p>
+              <pre class="code-block"><code>&lt;meta property="og:title"
+  content="My Site" /&gt;
+&lt;meta property="og:type"
+  content="website" /&gt;
+&lt;meta property="og:image"
+  content="preview.png" /&gt;
+&lt;meta property="og:url"
+  content="https://mysite.com" /&gt;</code></pre>
+            </article>
+            <article class="element-card">
+              <h3 class="el-name">HTML Entities</h3>
+              <p class="el-desc">Use character references for reserved or special characters in HTML.</p>
+              <pre class="code-block"><code>&amp;amp;  → &amp;
+&amp;lt;   → &lt;
+&amp;gt;   → &gt;
+&amp;copy; → ©
+&amp;nbsp; → (non-breaking space)</code></pre>
+            </article>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-text">Built from the <strong>HTML Basics Review</strong> — a freeCodeCamp curriculum reference.</p>
+        <p class="footer-copy">&copy; 2025 · No Copyright · <a href="https://freecodecamp.org">freeCodeCamp.org</a></p>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
